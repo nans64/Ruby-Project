@@ -1,4 +1,4 @@
-def ask_first_name()
+def ask_first_name # Function to ask the name 
 
 	puts "Quel est ton nom petit Mouss ?"
 	first_name = gets.chomp
@@ -7,8 +7,8 @@ def ask_first_name()
 end
 
 
-def salutation(first_name)
+def say_hello(first_name) # Function to retourn the name into the console
 	puts "Bonjour, #{first_name} !"
 end
 
-salutation(ask_first_name())
+say_hello(ask_first_name)
