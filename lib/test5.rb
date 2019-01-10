@@ -12,3 +12,12 @@ foo
 count # => 1
 foo
 count # => 2
+
+
+
+
+
+
+
+  100.times do
+  	boucle
