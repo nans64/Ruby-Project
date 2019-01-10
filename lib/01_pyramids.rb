@@ -1,4 +1,4 @@
- def half_pyramid
+ def full_pyramid
 
 	# The pyramid will have 5 stairs
 
@@ -25,82 +25,49 @@
 
 end
 
-#half_pyramid ## If you unquote this sentence you will get the haf pyramid on top of everything
+#full_pyramid ## If you unquote this sentence you will get the haf pyramid on top of everything
 
+def wtf_pyramid
 
- # Ask how many stairs the users wants for his Pyramid.
-
-
-def combien_etages
-
-	puts "Combien d'étages souhaites tu ? (nombre impair) "
-
-    $a = gets.chomp.to_i
-    return $a
-
-end
-
-
- # Control if the number is not even 
-
-def even?(a)
-  (a % 2) == 0 
-end
-
-unless even?(combien_etages) == false 
-
-# Reject if the number is even
- 
-
-	puts "Petit malin ;) ! Pourrais tu entrer un nombre impair stp ?"
-
-else 
-
-# Construct the pyramid 
- 
-def full_pyramid()
-
-	# Divide by 2 the number input to build the up of the pyramid
-	$y = ($a / 2)
+	# Divide by 2 the number input to build the top of the pyramid
+	$top = ($etages / 2)
 
 	i = 1
-	k = $y
+	k = $top
 	t = k + 5
 
 	# Construct the pyramid from the top to the bottom
-	i.upto(k) do
-	  t.times do
-	    print ' '
-	  end
+	i.upto(k) do t.times do
+	    					print ' '
+	  					 end
 
 	  # Print the *
 	  (2 * i - 1).times do
-	    print '*'
-	  end
+						    print '*'
+						end
 	  # Return the line for the next stair
 	  print "\n"
 
 	  t -= 1
 	  i += 1
-	end
+	  end
 
-	# Diff the variable input with the result above
-	$z = ($a - $y)
+	# Diff the number of stairs with the result above
+	$bottom = ($etages - $top)
 
-	i = $z
+	i = $bottom
 	k = 1
 	t = 5
 
 	# Construct the pyramid from the bottom to the top
-	i.downto(k) do
-	  t.times do
-	    print ' '
-	  end
+	i.downto(k) do t.times do 
+								print ' ' 
+						   end
 
 	  # Print the *
-	  (2 * i - 1).times do
-	    print '*'
-	  end
+	  (2 * i - 1).times do 
+	  							print '*'
+	  					end
 	  
 	  # Return the line for the next stair
 	  print "\n"
@@ -110,7 +77,29 @@ def full_pyramid()
 	end
 end
 
-# Push the result
-full_pyramid()
+# Ask how many stairs the users wants for his Pyramid.
+
+def combien_etages
+
+	puts "Combien d'étages souhaites tu ? (nombre impair) "
+
+    $etages = gets.chomp.to_i
+    return $etages
+
+end
+
+# Control if the number is even 
+
+def even?(etages)
+  (etages % 2) == 0 
+end
+
+unless even?(combien_etages) == false # Reject if the number is even
+
+	puts "Petit malin ;) ! Pourrais tu entrer un nombre impair stp ?"
+
+else 
+
+wtf_pyramid # Push the result if the number is odd
 
 end
