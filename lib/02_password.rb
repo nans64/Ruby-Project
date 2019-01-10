@@ -1,23 +1,24 @@
-def perform
-	def signup()
+	def ask_signup
 
 		puts "Donne nous ton mot de passe ?"
-		$signup = gets.chomp
-		return $signup
+		signup = gets.chomp
+		return signup
 
 	end
-	signup()
+	
 
-	def login()
+	def ask_login
 
 		puts "Entre ton mot de passe pour rentrer dans le volt?"
-		$login = gets.chomp
-		return $login
+		login = gets.chomp
+		return login
 
 	end
-	login()
+	
 
 
+
+def welcome(signup, login)
 	if $signup != $login
 
 		puts "Votre mot de passe n'est pas bon"
@@ -28,4 +29,11 @@ def perform
 
 	end
 end
+
+def perform
+  signup = ask_signup
+  login = ask_login
+  welcome(signup, login)
+end
+
 perform

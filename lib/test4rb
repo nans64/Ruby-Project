@@ -26,4 +26,8 @@ puts "Tu as réussi à arriver à la dernière marche, je te donne une sucette"
 
 end
 
-boucle 
+
+def perform 
+
+	boucle
+end
