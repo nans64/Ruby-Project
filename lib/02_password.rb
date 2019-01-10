@@ -1,19 +1,19 @@
-	def ask_signup
+def ask_signup
 
 		puts "Donne nous ton mot de passe ?"
 		signup = gets.chomp
 		return signup
 
-	end
+end
 	
 
-	def ask_login
+def ask_login
 
 		puts "Entre ton mot de passe pour rentrer dans le volt?"
 		login = gets.chomp
 		return login
 
-	end
+end
 	
 
 
@@ -25,7 +25,7 @@ def welcome(signup, login)
 
 	else 
 
-		puts "MESSAGE TOP SECRET NICOLAS EST CUISINIER AVEC DES LUNETTES DE PISCINE -> VOIR LA PHOTO"
+		puts "MESSAGE TOP SECRET NICOLAS COUPE LES OIGNONS AVEC DES LUNETTES DE PISCINE - PHOTO A SUIVRE - FIN"
 
 	end
 end
